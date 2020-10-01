@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  width: 100vw;
+}
+
+h1 {
+  position: absolute;
+  top: -1000px;
+  overflow: hidden;
+}
+
+.header-main-background {
+  background: url(../../assets/images/start-screen-gradient-background.png),
+   radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+   background-size: cover;
+}
+
+header {
+  max-width: 1200px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 60px;
+  position: relative;
+  left: -10px;
+  top: -18px;
+}
+
+.logo {
+  display: flex;
+  flex-flow: column;
+}
+
+.logo-title {
+  font-family: Georgia;
+  font-size: 1.34rem;
+  color: #F1CDB3;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  line-height: 110%;
+  letter-spacing: -0.03em;
+  position: relative;
+  top: -3px;
+  left: 0px;
+}
+
+.logo-subtitle {
+  font-family: Arial;
+  line-height: 15px;
+  font-size: 0.81rem;
+  color: #FFFFFF;
+  letter-spacing: 0.099em;
+  position: relative;
+  top: -14px;
+  left: 6px;
+}
+
+.menu {
+  display: flex;
+  flex-flow: row;
+}
+
+.menu nav ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row;
+  list-style: none;
+  width: 443px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu nav ul li a {
+  text-decoration: none;
+  color: #CDCDCD;
+  font-family: Arial;
+  font-size: 0.938rem;
+  line-height: 160%;
+}
+.menu nav ul li a:hover {
+  border-bottom: 3px solid #F1CDB3;
+}
+
+#about {
+  color: #FAFAFA;
+  border-bottom: 3px solid #F1CDB3;
+  padding-bottom: 4px;
+  position: relative;
+  letter-spacing: 0.014em;
+  top: 0px;
+  left: 3px;
+}
+
+#pets {
+  position: relative;
+  letter-spacing: 0.01em;
+  top: 0px;
+  left: 1px;
+}
+
+#help {
+  position: relative;
+  letter-spacing: 0.009em;
+  top: 0px;
+  left: 2px;
+}
+
+#contacts {
+  position: relative;
+  letter-spacing: 0.009em;
+  top: 0px;
+  left: 2px;
+}
+
