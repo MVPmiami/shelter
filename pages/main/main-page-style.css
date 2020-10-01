@@ -2,7 +2,7 @@ body {
   margin: 0;
   width: 100vw;
 }
-
+/*Header*/
 h1 {
   position: absolute;
   top: -1000px;
@@ -37,12 +37,16 @@ header {
   font-family: Georgia;
   font-size: 1.34rem;
   color: #F1CDB3;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   line-height: 110%;
-  letter-spacing: -0.03em;
+}
+
+.logo-title h2 {
+  font-weight: 400;
+  letter-spacing: 0.06em;
   position: relative;
   top: -3px;
   left: 0px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
 }
 
 .logo-subtitle {
@@ -81,6 +85,7 @@ header {
 }
 .menu nav ul li a:hover {
   border-bottom: 3px solid #F1CDB3;
+  padding-bottom: 4px;
 }
 
 #about {
@@ -112,5 +117,73 @@ header {
   letter-spacing: 0.009em;
   top: 0px;
   left: 2px;
+}
+
+/*not-only*/
+
+.not-only {
+  padding-top: 28px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-not-omly h2 {
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 2.750rem;
+  line-height: 130%;
+  color: #FFFFFF;
+  position: relative;
+  top: 127px;
+  left: -9px;
+}
+
+.info-not-only-paragraph {
+  max-width: 460px;
+  text-align: left;
+  font-family: Arial;
+  font-weight: normal;
+  font-size: 0.938rem;
+  line-height: 160%;
+  color: #CDCDCD;
+  position: relative;
+  top: 131px;
+  left: -9px;
+  letter-spacing: 0.017em;
+}
+
+.start-screen-puppy {
+  position: relative;
+  top: 0px;
+  left: -8px;
+}
+
+.make-friend {
+  width: 207px;
+  height: 52px;
+  background: #F1CDB3;
+  border-radius: 100px;
+  border: none;
+  position: relative;
+  top: 158px;
+  left: -8px;
+  outline: none;
+}
+
+.make-friend:hover {
+  cursor: pointer;
+  background: #fddcc4;
+}
+
+.make-friend span {
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
 }
 
