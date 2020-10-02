@@ -1,6 +1,10 @@
+/** {
+  outline: 1px solid red;
+  }*/
+
 body {
   margin: 0;
-  width: 100vw;
+  width: 100%;
 }
 /*Header*/
 h1 {
@@ -22,9 +26,9 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding-top: 60px;
+  padding-top: 58px;
   position: relative;
-  left: -10px;
+  left: 0px;
   top: -18px;
 }
 
@@ -57,7 +61,7 @@ header {
   letter-spacing: 0.099em;
   position: relative;
   top: -14px;
-  left: 6px;
+  left: 4px;
 }
 
 .menu {
@@ -93,30 +97,30 @@ header {
   border-bottom: 3px solid #F1CDB3;
   padding-bottom: 4px;
   position: relative;
-  letter-spacing: 0.014em;
+  letter-spacing: 0.023em;
   top: 0px;
-  left: 3px;
+  left: 0px;
 }
 
 #pets {
   position: relative;
   letter-spacing: 0.01em;
   top: 0px;
-  left: 1px;
+  left: -1px;
 }
 
 #help {
   position: relative;
-  letter-spacing: 0.009em;
+  letter-spacing: 0.01em;
   top: 0px;
-  left: 2px;
+  left: -1px;
 }
 
 #contacts {
   position: relative;
   letter-spacing: 0.009em;
   top: 0px;
-  left: 2px;
+  left: 1px;
 }
 
 /*not-only*/
@@ -138,7 +142,7 @@ header {
   color: #FFFFFF;
   position: relative;
   top: 127px;
-  left: -9px;
+  left: 0px;
 }
 
 .info-not-only-paragraph {
@@ -151,14 +155,14 @@ header {
   color: #CDCDCD;
   position: relative;
   top: 131px;
-  left: -9px;
-  letter-spacing: 0.017em;
+  left: 0px;
+  letter-spacing: 0.016em;
 }
 
 .start-screen-puppy {
   position: relative;
   top: 0px;
-  left: -8px;
+  left: 0px;
 }
 
 .make-friend {
@@ -169,7 +173,7 @@ header {
   border: none;
   position: relative;
   top: 158px;
-  left: -8px;
+  left: 0px;
   outline: none;
 }
 
@@ -187,3 +191,61 @@ header {
   color: #292929;
 }
 
+/*about*/
+
+.about {
+  padding-bottom: 89px;
+  padding-top: 80px;
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  background-color: #ffffff;
+}
+
+.background-about {
+  background-color: #ffffff;
+}
+
+.pets-about{
+  max-width: 300px;
+  max-height: 408px;
+  position: relative;
+  top: 0px;
+  left: 56px;
+}
+
+.text-about h2 {
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 2.188rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+  position: relative;
+  top: -15px;
+  left: -64px;
+}
+
+.text-about{
+  font-family: Arial;
+  font-weight: normal;
+  font-size: 0.938rem;
+  line-height: 160%;
+  color: #4C4C4C;
+  text-align: left;
+}
+
+.first-chapter {
+  position: relative;
+  top: -21px;
+  left: -64px;
+  letter-spacing: 0.012em;
+}
+
+.second-chapter {
+  position: relative;
+  top: -11px;
+  left: -65px;
+  letter-spacing: 0.013em;
+}
