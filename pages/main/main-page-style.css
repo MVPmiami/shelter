@@ -48,7 +48,7 @@ header {
   font-weight: 400;
   letter-spacing: 0.06em;
   position: relative;
-  top: -3px;
+  top: -6px;
   left: 0px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
 }
@@ -60,7 +60,7 @@ header {
   color: #FFFFFF;
   letter-spacing: 0.099em;
   position: relative;
-  top: -14px;
+  top: -17px;
   left: 4px;
 }
 
@@ -90,6 +90,7 @@ header {
 .menu nav ul li a:hover {
   border-bottom: 3px solid #F1CDB3;
   padding-bottom: 4px;
+  color: #FAFAFA;
 }
 
 #about {
@@ -98,35 +99,35 @@ header {
   padding-bottom: 4px;
   position: relative;
   letter-spacing: 0.023em;
-  top: 0px;
+  top: -3px;
   left: 0px;
 }
 
 #pets {
   position: relative;
   letter-spacing: 0.01em;
-  top: 0px;
+  top: -3px;
   left: -1px;
 }
 
 #help {
   position: relative;
   letter-spacing: 0.01em;
-  top: 0px;
+  top: -3px;
   left: -1px;
 }
 
 #contacts {
   position: relative;
   letter-spacing: 0.009em;
-  top: 0px;
+  top: -3px;
   left: 1px;
 }
 
 /*not-only*/
 
 .not-only {
-  padding-top: 28px;
+  padding-top: 25px;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
@@ -248,4 +249,202 @@ header {
   top: -11px;
   left: -65px;
   letter-spacing: 0.013em;
+}
+
+/* Our Friends */
+
+.background-our-friends {
+  background-color: #f6f6f6;
+}
+
+.our-friends {
+  padding-bottom: 241px;
+  display: flex;
+  flex-flow: column;
+  margin: 0 auto;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.pets-scroll {
+  width: 1200px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.our-friends h2 {
+  text-align: center;
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 2.188rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+  position: relative;
+  top: 51px;
+  left: 0px;
+}
+
+.arrow-left {
+  border: 2px solid #F1CDB3;
+  box-sizing: border-box;
+  border-radius: 100px;
+  width: 51px;
+  height: 51px;
+  background-image: url(../../assets/icons/Arrow-left.png);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50% ;
+  position: relative;
+  top: 81px;
+  left: -27px;
+}
+
+.arrow-left:hover {
+  cursor: pointer;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
+  background-size: 35%;
+}
+
+.flex-prop{
+  height: 435px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+.pets-scroll p {
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin: 0;
+}
+
+.btn-learn-more {
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 1.063rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  border: 2px solid #F1CDB3;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background-color: #fafafa;
+  width: 188px;
+  height: 52px;
+}
+
+.btn-learn-more:hover {
+  cursor: pointer;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
+}
+
+.flex-prop:hover {
+  cursor: pointer;
+  outline: 1px solid #fddcc4; 
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+}
+
+.arrow-right {
+  border: 2px solid #F1CDB3;
+  box-sizing: border-box;
+  border-radius: 100%;
+  width: 51px;
+  height: 51px;
+  background-image: url(../../assets/icons/Arrow-right.png);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50% ;
+  position: relative;
+  top: 81px;
+  left: 29px;
+}
+
+.arrow-right:hover {
+  cursor: pointer;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
+  background-size: 35%;
+}
+
+.btn-get-know {
+  width: 261px;
+  height: 52px;
+  background: #f1cdb3;
+  border-radius: 100px;
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  border: none;
+  position: relative;
+  top: 141px;
+  left: 0px;
+}
+
+.btn-get-know:hover {
+  cursor: pointer;
+  background-color: #fddcc4;
+}
+
+.pet-katrine{
+  position: relative;
+  top: 81px;
+  left: -32px;
+}
+
+.pet-jennifer {
+  position: relative;
+  top: 81px;
+  left: 0px;
+}
+
+.pet-woody {
+  position: relative;
+  top: 81px;
+  right: -33px;
+}
+
+.cat-Katrine {
+  position: relative;
+  top: -15px;
+  right: 0px;
+}
+
+.cat-Katrine p {
+  position: relative;
+  top: -15px;
+  right: 0px;
+}
+
+.btn-learn-more {
+  position: relative;
+  top: -15px;
+  right: 0px;
+}
+
+.pet-Katrine {
+  position: relative;
+  top: -15px;
+  right: 0px;
+}
+
+.pet-Woody {
+  position: relative;
+  top: -15px;
+  right: 0px;
 }
