@@ -874,3 +874,8 @@ footer {
   cursor: pointer;
   text-shadow: 6px 6px black;
 }
+
+.footer-link-style {
+  text-decoration: none;
+  color: #F1CDB3;
+}
