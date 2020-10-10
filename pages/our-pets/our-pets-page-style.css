@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  width: 100%;
+}
+
+/*Header*/
+
+h1 {
+  position: absolute;
+  top: -1000px;
+  overflow: hidden;
+}
+
+.header-our-pets-background {
+ background-color: #ffffff;
+ position: sticky;
+ top: 0px;
+}
+
+header {
+  max-width: 1200px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 28px;
+  position: relative;
+  left: 0px;
+  top: -13px;
+}
+
+.logo {
+  display: flex;
+  flex-flow: column;
+}
+
+.logo-title {
+  font-family: Georgia;
+  font-size: 1.34rem;
+  color: #545454;
+  line-height: 110%;
+}
+
+.logo-title h2 {
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  position: relative;
+  top: -6px;
+  left: 0px;
+}
+
+.logo-subtitle {
+  font-family: Arial;
+  line-height: 15px;
+  font-size: 0.81rem;
+  color: #292929;
+  letter-spacing: 0.099em;
+  position: relative;
+  top: -17px;
+  left: 4px;
+}
+
+.menu {
+  display: flex;
+  flex-flow: row;
+}
+
+.menu nav ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row;
+  list-style: none;
+  width: 443px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu nav ul li a {
+  text-decoration: none;
+  color: #CDCDCD;
+  font-family: Arial;
+  font-size: 0.938rem;
+  line-height: 160%;
+}
+.menu nav ul li a:hover {
+  border-bottom: 3px solid #F1CDB3;
+  padding-bottom: 4px;
+  color: #FAFAFA;
+}
+
+#about {
+  color: #545454;
+  position: relative;
+  letter-spacing: 0.023em;
+  top: -3px;
+  left: 0px;
+}
+
+#pets {
+  position: relative;
+  color: #292929;
+  border-bottom: 3px solid #F1CDB3;
+  padding-bottom: 4px;
+  letter-spacing: 0.01em;
+  top: -3px;
+  left: -1px;
+}
+
+#help {
+  position: relative;
+  color: #545454;
+  letter-spacing: 0.01em;
+  top: -3px;
+  left: -1px;
+}
+
+#contacts {
+  color: #545454;
+  position: relative;
+  letter-spacing: 0.009em;
+  top: -3px;
+  left: 1px;
+}
