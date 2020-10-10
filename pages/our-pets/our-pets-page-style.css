@@ -267,5 +267,141 @@ header {
   background-color: #fddcc4;
 }
 
+/* Footer */
 
+.footer-background {
+  background: url(../../assets/images/start-screen-gradient-background.png),
+   radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+   background-size: cover;
+}
+
+footer {
+  padding-top: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row-prop {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-h2 {
+  margin: 0;
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 2.188rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+.email-telephone-section h2 {
+  position: relative;
+  top: -64px;
+  left: 0px;
+}
+
+.local-position-section h2 {
+  position: relative;
+  top: -54px;
+  left: -13px;
+}
+
+.email-image {
+  background-image: url(../../assets/icons/mail.png);
+  width: 46px;
+  height: 26px;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -22px;
+}
+
+.telephone-image {
+  background-image: url(../../assets/icons/phone.png);
+  width: 40px;
+  height: 32px;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 21px;
+}
+
+.store-location-image {
+  background-image: url(../../assets/icons/pin.png);
+  width: 22px;
+  height: 32px;
+  background-repeat: no-repeat;
+}
+
+.email-telephone-section p {
+  margin: 0;
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 1.250rem;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+}
+
+.local-position-section p {
+  margin: 0;
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 1.250rem;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+}
+
+.email p {
+  position: relative;
+  top: -22px;
+  left: -27px;
+}
+
+.telephone p {
+  position: relative;
+  top: 21px;
+  left: -39px;
+}
+
+.store-image {
+  position: relative;
+  top: -22px;
+  left: -14px;
+}
+
+.self-image {
+  position: relative;
+  top: 11px;
+  left: -14px;
+}
+
+.store-location p {
+  position: relative;
+  top: -22px;
+  left: 6px;
+}
+
+.self-location p {
+  position: relative;
+  top: 11px;
+  left: -18px;
+}
+
+.footer-hover:hover {
+  cursor: pointer;
+  text-shadow: 6px 6px black;
+}
+
+.footer-link-style {
+  text-decoration: none;
+  color: #F1CDB3;
+}
 
