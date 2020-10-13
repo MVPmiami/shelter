@@ -119,11 +119,77 @@ header {
   top: -3px;
   left: 1px;
 }
+.burger{
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 1280px){
+  .logo{
+    position: relative;
+    top: -30px;
+    left: 30px;
+  }
+  .menu{
+    position: relative;
+    top: -30px;
+    left: -30px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  header{
+    height: 135px;
+  }
+  .logo{
+    position: relative;
+    top: -51px;
+    left: 10px;
+  }
+  .burger{
+    min-width: 30px;
+    min-height: 22px;
+    display: block;
+    background-image: url(../../assets/icons/Burger.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+  }
+  .menu nav ul{
+    display: flex;
+    justify-content: flex-start;
+    width: 30px;
+    height: 22px;
+    overflow: hidden;
+    position: relative;
+    top: -52px;
+    left: -53px;
+  }
+  .menu nav ul li{
+    padding-bottom: 10px;
+  }
+  .menu nav ul li a{
+    font-size: 0.750rem;
+  }
+  .menu nav ul li:first-child{
+    padding-bottom: 0px;
+  }
+  .menu nav ul li:nth-child(2){
+    padding-top: 50px;
+  }
+
+  .menu nav ul:hover{
+    height: 150px;
+    display: flex;
+    flex-flow: column;
+    overflow: visible;
+    width: 130px;
+    position: relative;
+    top: -70px;
+    left: -3px;
+  }
+}
 
 /*not-only*/
 
 .not-only {
-  padding-top: 30px;
+  padding-top: 27px;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
@@ -138,7 +204,7 @@ header {
   line-height: 130%;
   color: #FFFFFF;
   position: relative;
-  top: 127px;
+  top: 130px;
   left: 0px;
 }
 
@@ -151,14 +217,14 @@ header {
   line-height: 160%;
   color: #CDCDCD;
   position: relative;
-  top: 131px;
+  top: 134px;
   left: 0px;
   letter-spacing: 0.016em;
 }
 
 .start-screen-puppy {
   position: relative;
-  top: 0px;
+  top: 3px;
   left: 0px;
 }
 
@@ -169,7 +235,7 @@ header {
   border-radius: 100px;
   border: none;
   position: relative;
-  top: 158px;
+  top: 161px;
   left: 0px;
   outline: none;
 }
@@ -186,6 +252,69 @@ header {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #292929;
+}
+
+@media (min-width: 768px) and (max-width: 1280px){
+.not-only{
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 92px;
+}
+.info-not-omly h2{
+  top: -128px;
+  left: 0px;
+}
+.info-not-only-paragraph{
+  top: -124px;
+  left: -1px;
+}
+.make-friend{
+  top: -96px;
+  left: 126px;
+}
+.start-screen-puppy{
+top: 4px;
+left: 69px;
+}
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .not-only{
+    padding-top: 85px;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  .info-not-omly h2{
+    display: flex;
+    font-size: 1.563rem;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: -149px;
+    left: 0px;
+  }
+  .info-not-only-paragraph{
+    width: 300px;
+    display: flex;
+    font-size: 0,938;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: -129px;
+    left: 0px;
+  }
+  .make-friend{
+    top: -102px;
+    left: 46px;
+  }
+  .start-screen-puppy{
+    top: 3px;
+    left: 20px;
+    }
 }
 
 /*about*/
@@ -209,7 +338,7 @@ header {
   max-height: 408px;
   position: relative;
   top: 0px;
-  left: 56px;
+  left: 58px;
 }
 
 .text-about h2 {
@@ -221,7 +350,7 @@ header {
   color: #545454;
   position: relative;
   top: -15px;
-  left: -64px;
+  left: -57px;
 }
 
 .text-about{
@@ -234,17 +363,86 @@ header {
 }
 
 .first-chapter {
+  width: 430px;
   position: relative;
   top: -21px;
-  left: -64px;
+  left: -57px;
   letter-spacing: 0.012em;
 }
 
 .second-chapter {
+  width: 430px;
   position: relative;
   top: -11px;
-  left: -65px;
+  left: -58px;
   letter-spacing: 0.013em;
+}
+
+@media (min-width: 768px) and (max-width: 1280px){
+  .about{
+    flex-flow: column;
+    align-items: center;
+    padding-bottom: 170px;
+    padding-top: 51px;  
+  }
+  .pets-about{
+    order: 3;
+    position: relative;
+    top: 70px;
+    left: 0px;
+  }
+  .text-about h2{
+    top: 0px;
+    left: 0px;
+  }
+  .first-chapter{
+    position: relative;
+    top: -6px;
+    left: 0px;
+  }
+  .second-chapter{
+    position: relative;
+    top: 4px;
+    left: 0px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px){
+  .about{
+    flex-flow: column;
+    align-items: center;
+    padding-bottom: 74px;
+    padding-top: 22px;
+  }
+  .pets-about{
+    order: 3;
+    position: relative;
+    top: 35px;
+    left: 0px;
+  }
+  .text-about h2{
+    text-align: center;
+    font-size: 1.563rem;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    top: -1px;
+    left: 0px;
+  }
+  .text-about p{
+    width: 270px;
+    font-size: 0.938rem;
+    line-height: 160%;
+    text-align: justify;
+  }
+  .first-chapter{
+    position: relative;
+    top: 2px;
+    left: 0px;
+  }
+  .second-chapter{
+    position: relative;
+    top: 9px;
+    left: 0px;
+  }
 }
 
 /* Our Friends */
@@ -399,20 +597,20 @@ header {
 
 .pet-katrine{
   position: relative;
-  top: 81px;
+  top: 80px;
   left: -32px;
 }
 
 .pet-jennifer {
   position: relative;
-  top: 81px;
+  top: 80px;
   left: 0px;
 }
 
 .pet-woody {
   position: relative;
-  top: 81px;
-  right: -33px;
+  top: 80px;
+  right: -32px;
 }
 
 .cat-Katrine {
@@ -445,6 +643,71 @@ header {
   right: 0px;
 }
 
+@media (min-width: 768px) and (max-width: 1280px){
+  .pet-woody{
+    display: none;
+  }
+  .pets-scroll{
+    justify-content: center;
+  }
+  .flex-prop{
+    margin-right: 40px;
+
+  }
+  .arrow-left{
+    margin-right: 12px;
+    left: -14px;
+  }
+  .arrow-right{
+    margin-left: -54px;
+    left: 13px;
+  }
+  .pet-katrine{
+    top: 81px;
+    left: -13px;
+  }
+  .pet-jennifer{
+    top: 81px;
+    left: -13px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px){
+  .our-friends{
+    padding-bottom: 197px;
+  }
+  .our-friends h2{
+    font-size: 1.563rem;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    top: 20px;
+    left: 0px;
+  }
+  .pet-jennifer{
+    display: none;
+  }
+  .pet-woody{
+    display: none;
+  }
+  .pet-katrine{
+    top: 41px;
+    left: 0px;
+  }
+  .arrow-right{
+    top: 305px;
+    left: -371px;
+  }
+  .arrow-left{
+    top: 305px;
+    left: 371px;
+  }
+  .btn-get-know{
+    top: 155px;
+    left: 0px;
+  }
+}
 /* help */
 
 .background-help {
@@ -478,7 +741,7 @@ header {
 .first-row {
   width: 100%;
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -486,7 +749,7 @@ header {
 .second-row {
   width: 100%;
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -634,6 +897,184 @@ header {
   text-decoration: underline 3px #f1cdb3;
 }
 
+@media (min-width: 768px) and (max-width: 1280px){
+.help{
+  padding-bottom: 282px;
+}
+.first-row{
+  width: 630px;
+}
+.second-row{
+  width: 630px;
+}
+.food {
+  left: 45px;
+}
+.transport {
+  top: 0px;
+  left: 136px;
+}
+.toys{
+  position: relative;
+  top: 0px;
+  left: 241px;
+}
+.bowls {
+  top: 169px;
+  left: -346px;
+}
+.shampoos{
+  top: 168px;
+  left: -265px;
+}
+.vitamins {
+    top: 36px;
+    left: 484px;
+}
+.medicines {
+  top: 203px;
+  left: -104px;
+}
+.medicines p{
+  position: relative;
+  top: -2px;
+}
+.collars {
+  top: 204px;
+  left: -40px;
+}
+.sleep {
+  top: 203px;
+  left: 5px;
+}
+}
+@media (min-width: 320px) and (max-width: 767px){
+  .help{
+    padding-bottom: 130px;
+  }
+  .first-row{
+    max-width: 290px;
+  }
+  .second-row{
+    max-width: 290px;
+  }
+  .help h2{
+    font-size: 1.563rem;
+    line-height: 130%;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    top: -30px;
+    left: 0px;
+  }
+  .center-prop p{
+    font-size: 0.938rem;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    position: relative;
+    top: -6px;
+  }
+  .image-food {
+    background-image: url(../../assets/icons/food-320.png);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 50px;
+  }
+  .food {
+    top: -38px;
+    left: 34px;
+  }
+  .image-transport {
+    background-repeat: no-repeat;
+    background-image: url(../../assets/icons/transportation-320.png);
+    width: 50px;
+    height: 50px;
+  }
+  .transport{
+    top: -38px;
+    left: 73px;
+  }
+  .image-toys {
+    background-image: url(../../assets/icons/toys-320.png);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+  }
+  .toys{
+    position: relative;
+    top: 79px;
+    left: -200px;
+  }
+  .image-bowls {
+    background-repeat: no-repeat;
+    background-image: url(../../assets/icons/bowls-and-cups-320.png);
+    width: 50px;
+    height: 47px;
+  }
+  .bowls{
+    top: -28px;
+    left: 167px;
+  }
+  .image-shampoos {
+    background-repeat: no-repeat;
+    background-image: url(../../assets/icons/shampoos-320.png);
+    width: 26px;
+    height: 50px;
+  }
+  .shampoos{
+    top: 89px;
+    left: -188px;
+  }
+  .image-vitamins {
+    background-repeat: no-repeat;
+    background-image: url(../../assets/icons/vitamins-320.png);
+    width: 50px;
+    height: 45px;
+  }
+  .vitamins{
+    top: -18px;
+    left: 188px;
+  }
+  .vitamins p{
+    position: relative;
+    top: -3px;
+  }
+  .image-medicines {
+    background-repeat: no-repeat;
+    background-image: url(../../assets/icons/medicines-320.png);
+    width: 50px;
+    height: 50px;
+  }
+  .medicines{
+    top: 98px;
+    left: -52px;
+  }
+  .image-collars {
+    background-repeat: no-repeat;
+    background-image: url(../../assets/icons/collars-or-leashes-320.png);
+    width: 50px;
+    height: 43px;
+  }
+  .collars{
+    top: 99px;
+    left: 0px;
+  }
+  .collars p{
+    position: relative;
+    top: -2px;
+  }
+  .image-sleep {
+    background-repeat: no-repeat;
+    background-image: url(../../assets/icons/sleeping-area-320.png);
+    width: 50px;
+    height: 50px;
+  }
+  .sleep{
+    top: 109px;
+    left: -79px;
+  }
+}
+
 /* in addition */
 
 .background-in-addition {
@@ -642,7 +1083,7 @@ header {
 
 .in-addition {
   padding-top: 92px;
-  padding-bottom: 111px;
+  padding-bottom: 107px;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -665,8 +1106,8 @@ header {
 .account-number-link {
   text-decoration: none;
   position: relative;
-  top: 22px;
-  left: -6px;
+  top: 19px;
+  left: 6px;
 }
 
 .donation-information h2 {
@@ -678,8 +1119,8 @@ header {
   letter-spacing: 0.06em;
   color: #545454;
   position: relative;
-  top: -18px;
-  left: -6px;
+  top: -20px;
+  left: 6px;
 }
 
 #name-bank {
@@ -691,11 +1132,12 @@ header {
   letter-spacing: 0.06em;
   color: #545454;
   position: relative;
-  top: 1px;
-  left: -6px;
+  top: -1px;
+  left: 6px;
 }
 
 #legal-information {
+  width: 380px;
   font-family: Arial;
   font-style: italic;
   font-weight: normal;
@@ -704,8 +1146,8 @@ header {
   letter-spacing: -0.014em;
   color: #B2B2B2;
   position: relative;
-  top: 30px;
-  left: -6px;
+  top: 28px;
+  left: 5px;
 }
 
 .card-image {
@@ -728,20 +1170,115 @@ header {
   letter-spacing: 0.06em;
   color: #545454;
   position: relative;
-  top: -1px;
-  left: -4px;
+  top: 0px;
+  left: -3px;
 }
 
-.in-addition img {
+.donation-dog {
   margin-right: 18px;
   position: relative;
-  left: -18px;
+  left: -6px;
 }
 
 .account-number:hover {
   background-color: #fddcc4;
 } 
 
+@media (min-width: 768px) and (max-width: 1280px){
+.in-addition{
+  flex-flow: column;
+  padding-top: 101px;
+  padding-bottom: 171px;
+}
+.donation-dog{
+  order: 3;
+  top: 75px;
+  left: 8px;
+}
+
+.donation-information h2{
+  top: -21px;
+  left: 0px;
+}
+.account-number-link{
+  top: 19px;
+  left: 0px;
+}
+.account-number p{
+  top: -1px;
+  left: -4px;
+}
+#name-bank{
+  top: -1px;
+  left: 0px;
+}
+#legal-information{
+  top: 27px;
+  left: 0px;
+}
+}
+@media (min-width: 320px) and (max-width: 767px){
+  .in-addition{
+    padding-top: 63px;
+    padding-bottom: 94px;
+    flex-flow: column;
+  }
+  .donation-dog{
+    order: 3;
+    top: 56px;
+    left: 9px;
+  }
+  .donation-information{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .donation-information h2{
+    font-size: 1.563rem;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    top: -21px;
+    left: 0px;
+  }
+  #name-bank{
+    width: 274px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 160%;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.015em;
+    color: #545454;
+    top: -1px;
+    left: 0px;
+  }
+  .account-number{
+    width: 281px;
+    align-items: center;
+  }
+  .account-number-link{
+    top: 18px;
+    left: -1px;
+  }
+  .account-number p{
+    font-size: 15px;
+    line-height: 110%;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+  }
+  #legal-information{
+    width: 280px;
+    text-align: justify;
+    top: 26px;
+    left: 0px;
+  }
+}
 /* footer */
 
 .footer-background {
@@ -768,6 +1305,7 @@ footer {
 }
 
 .footer-h2 {
+  width: 279px;
   margin: 0;
   font-family: Georgia;
   font-weight: normal;
@@ -779,14 +1317,14 @@ footer {
 
 .email-telephone-section h2 {
   position: relative;
-  top: -64px;
+  top: -66px;
   left: 0px;
 }
 
 .local-position-section h2 {
   position: relative;
-  top: -54px;
-  left: -13px;
+  top: -56px;
+  left: -11px;
 }
 
 .email-image {
@@ -795,7 +1333,7 @@ footer {
   height: 26px;
   background-repeat: no-repeat;
   position: relative;
-  top: -22px;
+  top: -24px;
 }
 
 .telephone-image {
@@ -804,7 +1342,7 @@ footer {
   height: 32px;
   background-repeat: no-repeat;
   position: relative;
-  top: 21px;
+  top: 19px;
 }
 
 .store-location-image {
@@ -836,38 +1374,38 @@ footer {
 
 .email p {
   position: relative;
-  top: -22px;
-  left: -27px;
+  top: -24px;
+  left: -28px;
 }
 
 .telephone p {
   position: relative;
-  top: 21px;
+  top: 19px;
   left: -39px;
 }
 
 .store-image {
   position: relative;
-  top: -22px;
-  left: -14px;
+  top: -24px;
+  left: -12px;
 }
 
 .self-image {
   position: relative;
-  top: 11px;
-  left: -14px;
+  top: 9px;
+  left: -12px;
 }
 
 .store-location p {
   position: relative;
-  top: -22px;
-  left: 6px;
+  top: -23px;
+  left: 3px;
 }
 
 .self-location p {
   position: relative;
-  top: 11px;
-  left: -18px;
+  top: 9px;
+  left: -21px;
 }
 
 .footer-hover:hover {
@@ -878,4 +1416,86 @@ footer {
 .footer-link-style {
   text-decoration: none;
   color: #F1CDB3;
+}
+
+@media (min-width: 768px) and (max-width: 1280px){
+  footer{
+    flex-flow: wrap;
+    max-width: 768px;
+    padding-top: 85px;
+    padding-bottom: 75px;
+  }
+  .email-telephone-section{
+    position: relative;
+    top: 1px;
+    left: 64px;
+  }
+  .local-position-section{
+    position: relative;
+    top: 1px;
+    left: -75px;
+  }
+  .footer-puppy{
+    position: relative;
+    top: 75px;
+    left: 234px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px){
+  footer{
+    flex-flow: column;
+    padding-top: 96px;
+    padding-bottom: 178px;
+  }
+  .footer-puppy{
+    position: relative;
+    top: 178px;
+    left: 0px;
+  }
+  .footer-h2{
+    font-size: 25px;
+    line-height: 130%;
+    text-align: center;
+  }
+
+  .local-position-section{
+    position: relative;
+    top: 115px;
+  }
+  .email-image{
+    top: -24px;
+    left: 13px;
+  }
+  .email p{
+    top: -24px;
+    left: -15px;
+  }
+  .telephone-image{
+    top: 19px;
+    left: 19px;
+  }
+  .telephone p{
+    top: 19px;
+    left: -21px;
+  }
+  .local-position-section h2 {
+    top: -56px;
+    left: 0px;
+  }
+  .store-image {
+    top: -17px;
+    left: -11px;
+  }
+  .store-location p {
+    top: -18px;
+    left: 4px;
+  }
+  .self-image {
+    top: 23px;
+    left: -11px;
+  }
+  .self-location p {
+    top: 22px;
+    left: -21px;
+  }
 }
