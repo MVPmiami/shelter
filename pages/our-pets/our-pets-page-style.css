@@ -1,6 +1,7 @@
 body {
   margin: 0;
   width: 100%;
+  overflow-x: hidden;
 }
 
 /*Header*/
@@ -124,6 +125,73 @@ header {
   top: -3px;
   left: 1px;
 }
+.burger{
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 1280px){
+  .logo{
+    position: relative;
+    top: 0px;
+    left: 30px;
+  }
+  .menu{
+    position: relative;
+    top: 0px;
+    left: -30px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  header{
+    height: 26px;
+    padding-top: 94px;
+  }
+  .logo{
+    position: relative;
+    top: -33px;
+    left: 10px;
+  }
+  .burger{
+    min-width: 30px;
+    min-height: 22px;
+    display: block;
+    background-image: url(../../assets/icons/Burger-320.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+  }
+  .menu nav ul{
+    display: flex;
+    justify-content: flex-start;
+    width: 30px;
+    height: 22px;
+    overflow: hidden;
+    position: relative;
+    top: -34px;
+    left: -53px;
+  }
+  .menu nav ul li{
+    padding-bottom: 6px;
+  }
+  .menu nav ul li a{
+    font-size: 0.750rem;
+  }
+  .menu nav ul li:first-child{
+    padding-bottom: 0px;
+  }
+  .menu nav ul li:nth-child(2){
+    padding-top: 50px;
+  }
+
+  .menu nav ul:hover{
+    height: 150px;
+    display: flex;
+    flex-flow: column;
+    overflow: visible;
+    width: 130px;
+    position: relative;
+    top: -70px;
+    left: -3px;
+  }
+}
 
 /* our driends */
 
@@ -156,6 +224,12 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 1159px){
+  .pets-scroll{
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .our-friends h2 {
@@ -267,6 +341,62 @@ header {
   background-color: #fddcc4;
 }
 
+@media (min-width: 768px) and (max-width: 1280px){
+  .couple-pets{
+    top: 51px;
+  }
+  .scarlet-plus-freddie{
+    display: none;
+  }
+  .arrow-navigation{
+    position: relative;
+    top: -50px;
+  }
+  .our-friends{
+    padding-bottom: 27px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px){
+  .our-friends{
+    padding-bottom: 15px;
+  }
+  .our-friends h2{
+    font-size: 25px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    top: 21px
+  }
+  .couple-pets{
+    flex-flow: column;
+  }
+  .pet-katrine{
+    position: relative;
+    top: -40px;
+  }
+  .pet-jennifer{
+    position: relative;
+    top: -10px;
+  }
+  .pet-woody{
+    position: relative;
+    top: -10px;
+  }
+  .pet-sophia{
+    display: none;
+  }
+  .timmy-plus-charly{
+    display: none;
+  }
+  .scarlet-plus-freddie{
+    display: none;
+  }
+  .arrow-navigation{
+    width: 300px;
+    position: relative;
+    top: -28px;
+  }
+}
+
 /* Footer */
 
 .footer-background {
@@ -293,6 +423,7 @@ footer {
 }
 
 .footer-h2 {
+  width: 279px;
   margin: 0;
   font-family: Georgia;
   font-weight: normal;
@@ -304,14 +435,14 @@ footer {
 
 .email-telephone-section h2 {
   position: relative;
-  top: -64px;
+  top: -66px;
   left: 0px;
 }
 
 .local-position-section h2 {
   position: relative;
-  top: -54px;
-  left: -13px;
+  top: -56px;
+  left: -11px;
 }
 
 .email-image {
@@ -320,7 +451,7 @@ footer {
   height: 26px;
   background-repeat: no-repeat;
   position: relative;
-  top: -22px;
+  top: -24px;
 }
 
 .telephone-image {
@@ -329,7 +460,7 @@ footer {
   height: 32px;
   background-repeat: no-repeat;
   position: relative;
-  top: 21px;
+  top: 19px;
 }
 
 .store-location-image {
@@ -361,38 +492,38 @@ footer {
 
 .email p {
   position: relative;
-  top: -22px;
-  left: -27px;
+  top: -24px;
+  left: -28px;
 }
 
 .telephone p {
   position: relative;
-  top: 21px;
-  left: -39px;
+  top: 19px;
+  left: -40px;
 }
 
 .store-image {
   position: relative;
-  top: -22px;
-  left: -14px;
+  top: -24px;
+  left: -12px;
 }
 
 .self-image {
   position: relative;
-  top: 11px;
-  left: -14px;
+  top: 9px;
+  left: -12px;
 }
 
 .store-location p {
   position: relative;
-  top: -22px;
-  left: 6px;
+  top: -25px;
+  left: 3px;
 }
 
 .self-location p {
   position: relative;
-  top: 11px;
-  left: -18px;
+  top: 9px;
+  left: -21px;
 }
 
 .footer-hover:hover {
@@ -405,3 +536,88 @@ footer {
   color: #F1CDB3;
 }
 
+@media (min-width: 768px) and (max-width: 1280px){
+  footer{
+    flex-flow: wrap;
+    max-width: 768px;
+    padding-top: 85px;
+    padding-bottom: 75px;
+  }
+  .email-telephone-section{
+    position: relative;
+    top: 1px;
+    left: 64px;
+  }
+  .local-position-section{
+    position: relative;
+    top: 1px;
+    left: -75px;
+  }
+  .footer-puppy{
+    position: relative;
+    top: 75px;
+    left: 234px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px){
+  footer{
+    flex-flow: column;
+    padding-top: 96px;
+    padding-bottom: 178px;
+  }
+  .footer-puppy{
+    position: relative;
+    top: 178px;
+    left: 0px;
+  }
+  .footer-h2{
+    font-size: 25px;
+    line-height: 130%;
+    text-align: center;
+  }
+  .email-telephone-section h2 {
+    top: -66px;
+  }
+
+  .local-position-section{
+    position: relative;
+    top: 115px;
+  }
+  .email-image{
+    top: -24px;
+    left: 13px;
+  }
+  .email p{
+    top: -24px;
+    left: -15px;
+  }
+  .telephone-image{
+    top: 19px;
+    left: 19px;
+  }
+  .telephone p{
+    top: 19px;
+    left: -21px;
+  }
+  .local-position-section h2 {
+    width: 270px;
+    top: -56px;
+    left: 2px;
+  }
+  .store-image {
+    top: -17px;
+    left: -13px;
+  }
+  .store-location p {
+    top: -17px;
+    left: 6px;
+  }
+  .self-image {
+    top: 23px;
+    left: -13px;
+  }
+  .self-location p {
+    top: 22px;
+    left: -18px;
+  }
+}
