@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="main-page-style.css">
 </head>
 <body>
+  <div class="overley-burger-outer"></div>
   <div class="header-main-background">
     <header>
       <h1>Cozy House</h1>
@@ -16,13 +17,16 @@
       </div>
       <div class="menu">
         <nav>
-          <ul>
-            <li class="burger"></li>
-            <li><a href="#" id="about">About the shelter</a></li>
-            <li><a href="../our-pets/our-pets-page.html" id="pets">Our pets</a></li>
-            <li><a href="#" id="help">Help the shelter</a></li>
-            <li><a href="#" id="contacts">Contacts</a></li>
-          </ul>
+          <div class="burger">
+            <div class="overlay"></div>
+            <ul>
+              <li><a href="" class="burger-menu-btn"><span class="burger-menu-lines"></span></a></li>
+              <li><a href="#" id="about" class="burger-links">About the shelter</a></li>
+              <li><a href="../our-pets/our-pets-page.html" id="pets" class="burger-links">Our pets</a></li>
+              <li><a href="#" id="help" class="burger-links">Help the shelter</a></li>
+              <li><a href="#" id="contacts" class="burger-links">Contacts</a></li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -33,7 +37,7 @@
           extremely wide and open heart. He or she will love you more than 
           anybody else in the world, you will see!
         </p>
-        <button class="make-friend"><span>Make a friend</span></button>
+        <button class="make-friend"><a href="../our-pets/our-pets-page.html"><span>Make a friend</span></a></button>
       </div>
       <picture class="start-screen-puppy">
         <source media="(max-width: 767px)" srcset="../../assets/images/start-screen-puppy-320.png">
@@ -91,7 +95,7 @@
           </div>
           <div class="arrow-right"></div>
         </div>
-        <button class="btn-get-know">Get to know the rest</button>
+        <button class="btn-get-know"><a href="../our-pets/our-pets-page.html">Get to know the rest</a></button>
      </div>
    </div>
    <div class="background-help">
@@ -192,5 +196,6 @@
       </picture>
   </footer>
   </div>
+  <script src="main-page-app.js"></script>
 </body>
 </html>
