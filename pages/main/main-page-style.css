@@ -815,6 +815,23 @@ left: 69px;
   top: -15px;
   right: 0px;
 }
+.slider-pets{
+  width: 1200зч;
+  height: 465px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  /*background-color: #fafafa;*/
+  /*overflow: hidden;*/
+}
+.flex-prop:hover {
+  cursor: pointer;
+  outline: none; 
+  box-shadow: none;
+}
+
 
 @media (min-width: 768px) and (max-width: 1280px){
   .pet-woody{
@@ -845,6 +862,40 @@ left: 69px;
   }
 }
 @media (min-width: 320px) and (max-width: 767px){
+  .slider-pets{
+    width: 270px;
+    overflow: hidden;
+  }
+  .slider-pets:hover{
+    cursor: pointer;
+    outline: 1px solid #fddcc4; 
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+  }
+  .pets-scroll{
+    position: relative;
+  }
+  .pet-katrine{
+    width: 270px;
+    position: absolute;
+    top: 41px;
+    left: 0px;
+    /*display: none;*/
+  }
+  .pet-jennifer{
+    width: 270px;
+    position: absolute;
+    top: 41px;
+    left: 270px;
+    /*display: none;*/
+  }
+  .pet-woody{
+    width: 270px;
+    position: absolute;
+    top: 41px;
+    left: 405px;
+    right: 0px;
+    /*display: none;*/
+  }
   .our-friends{
     padding-bottom: 197px;
   }
@@ -858,27 +909,82 @@ left: 69px;
     top: 20px;
     left: 0px;
   }
-  .pet-jennifer{
-    display: none;
-  }
-  .pet-woody{
-    display: none;
-  }
-  .pet-katrine{
-    top: 41px;
-    left: 0px;
-  }
   .arrow-right{
-    top: 305px;
-    left: -371px;
+    position: absolute;
+    top: 497px;
+    left: 641px;
   }
   .arrow-left{
-    top: 305px;
-    left: 371px;
+    position: absolute;
+    top: 497px;
+    left: 509px;
   }
   .btn-get-know{
     top: 155px;
     left: 0px;
+  }
+  .hide-pet-to-left{
+    left: -270px;
+  }
+  .hide-pet-to-right{
+    left: 270px;
+  }
+  .active, .next{
+    display: flex;
+    flex-flow: column;
+  }
+  .active{
+    left: 0px;
+  }
+  .next {
+    width: 270px;
+    animation: from-right 1s;
+  }
+
+  @keyframes from-right{
+    from{
+      left:270px;
+    }
+    to{
+      left: 0px;
+    }
+  }
+  .to-left{
+    width: 270px;
+    animation: to-left 1s;
+  }
+  @keyframes to-left{
+    from{
+      left: 0px;
+    }
+    to{
+      left: -270px;
+    }
+  }
+  .previous{
+    left: -270px;
+  }
+  .from-left{
+    animation: from-left 1s;
+  }
+  @keyframes from-left {
+    from {
+      left: -270px;
+    }
+    to{
+      left: 0px;
+    }
+  }
+  .to-right{
+    animation: to-right 1s;
+  }
+  @keyframes to-right{
+    from{
+      left: 0px;
+    }
+    to{
+      left: 270px;
+    }
   }
 }
 /* help */
