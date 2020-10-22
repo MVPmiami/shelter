@@ -139,52 +139,155 @@ let petsInfo = [
 
 let pets = document.querySelectorAll('div.carousel');
 let currentPet = 0;
+let currentPetLeft = 0;
+let currentPetRight = 1;
+
+
+function getRandomIntInclusive(min, max) {
+  let previousNumPet = currentPet;
+  let nextNumPet;
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  do{
+    nextNumPet = Math.floor(Math.random() * (max - min + 1)) + min;
+  }while(nextNumPet === previousNumPet);
+
+  return currentPet = nextNumPet;
+};
+
+function getRandomIntInclusiveForTwoElements(min, max){
+  let nextNumPetOne = 0;
+  let nextNumPetTwo = 0;
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  do{
+    nextNumPetOne = Math.floor(Math.random() * (max - min + 1)) + min;
+    nextNumPetTwo = Math.floor(Math.random() * (max - min + 1)) + min;
+  }while(nextNumPetOne === nextNumPetTwo);
+  currentPetLeft = nextNumPetOne;
+  currentPetRight = nextNumPetTwo;
+  return currentPetLeft, currentPetRight;
+}
+
 let isEnabled = true;
 
-function changeCurrentPet(n) {
-  currentPet = (n + pets.length) % pets.length;
+function changeCurrentPet() {
+  if(window.screen.width < 768){
+    getRandomIntInclusive(0,7);
+  }else if(window.screen.width <= 1280){
+    getRandomIntInclusiveForTwoElements(0,7);
+  }
 }
 
 function hidePet(direction) {
-  isEnabled = false;
-  pets[currentPet].classList.add(direction);
-  pets[currentPet].addEventListener('animationend', function() {
+  if(window.screen.width < 768){
+    isEnabled = false;
+    pets[currentPet].classList.add(direction);
+    pets[currentPet].addEventListener('animationend', function() {
+      if(direction === 'to-left'){
+        this.classList.add('hide-pet-to-left');
+      }else{
+        this.classList.add('hide-pet-to-right');
+      }
+      this.classList.remove('active', direction);
+    });
+  }else if(window.screen.width <= 1280){
     if(direction === 'to-left'){
-      this.classList.add('hide-pet-to-left');
-    }else{
-      this.classList.add('hide-pet-to-right');
+      isEnabled = false;
+      pets[currentPetLeft].classList.add('to-left-one');
+      pets[currentPetRight].classList.add('to-left-two');
+      pets[currentPetLeft].addEventListener('animationend', function() {
+        this.classList.add('hide-pet-to-right-one');
+        this.classList.remove('to-left-one', 'active-one');
+      });
+      pets[currentPetRight].addEventListener('animationend', function() {
+        this.classList.add('hide-pet-to-right-two');
+        this.classList.remove('to-left-two', 'active-two');
+      });
+    }else if(direction === 'to-right'){
+      isEnabled = false;
+      pets[currentPetLeft].classList.add('to-right-one', 'active-one');
+      pets[currentPetRight].classList.add('to-right-two', 'active-two');
+      pets[currentPetLeft].addEventListener('animationend', function() {
+        this.classList.add('hide-pet-to-right-one');
+        this.classList.remove('to-right-one', 'active-one');
+      });
+      pets[currentPetRight].addEventListener('animationend', function() {
+        this.classList.add('hide-pet-to-right-two');
+        this.classList.remove('to-right-two', 'active-two');
+      });
     }
-    this.classList.remove('active', direction);
-  });
+  }
 }
 
 function showPet(direction) {
-  if(direction === 'from-right'){
-    pets[currentPet].classList.add('next', direction);
-    pets[currentPet].addEventListener('animationend', function() {
-      this.classList.remove('next', direction);
-      this.classList.add('active');
-      isEnabled = true;
-    });
-  }else{
-    pets[currentPet].classList.add('previous', direction);
-    pets[currentPet].addEventListener('animationend', function() {
-      this.classList.remove('previous', direction);
-      this.classList.add('active');
-      isEnabled = true;
-    });
+  if(window.screen.width < 768){
+    if(direction === 'from-right'){
+      pets[currentPet].classList.add('next', direction);
+      pets[currentPet].addEventListener('animationend', function() {
+        this.classList.remove('next', direction);
+        this.classList.add('active');
+        isEnabled = true;
+      });
+    }else{
+      pets[currentPet].classList.add('previous', direction);
+      pets[currentPet].addEventListener('animationend', function() {
+        this.classList.remove('previous', direction);
+        this.classList.add('active');
+        isEnabled = true;
+      });
+    }
+  }else if(window.screen.width <= 1280){
+    if(direction === 'from-right'){
+      pets[currentPetLeft].classList.add('from-right-one');
+      pets[currentPetRight].classList.add('from-right-two');
+      pets[currentPetLeft].addEventListener('animationend', function() {
+        this.classList.add('active-one');
+        this.classList.remove('hide-pet-to-right-one', 'hide-pet-to-right-two');
+        this.classList.remove('from-right-one');
+        isEnabled = true;
+      });
+      pets[currentPetRight].addEventListener('animationend', function() {
+        this.classList.add('active-two');
+        this.classList.remove('hide-pet-to-right-one','hide-pet-to-right-two');
+        this.classList.remove('from-right-two');
+        isEnabled = true;
+      });
+    }else if(direction === 'from-left'){
+      pets[currentPetLeft].classList.add('from-left-one');
+      pets[currentPetRight].classList.add('from-left-two');
+      pets[currentPetLeft].addEventListener('animationend', function() {
+        this.classList.add('active-one');
+        this.classList.remove('hide-pet-to-right-one', 'hide-pet-to-right-two');
+        this.classList.remove('from-left-one');
+        isEnabled = true;
+      });
+      pets[currentPetRight].addEventListener('animationend', function() {
+        this.classList.add('active-two');
+        this.classList.remove('hide-pet-to-right-one', 'hide-pet-to-right-two');
+        this.classList.remove('from-left-two');
+        isEnabled = true;
+      });
+    }
   }
 }
 
 function nextPet(n) {
-  hidePet('to-left');
-  changeCurrentPet(n + 1);
-  showPet('from-right');
+  if(window.screen.width < 767){
+    hidePet('to-left');
+    changeCurrentPet();
+    showPet('from-right');
+  }else if(window.screen.width <= 1280){
+    hidePet('to-left');
+    changeCurrentPet();
+    console.log(currentPetLeft,currentPetRight);
+    showPet('from-right');
+  }
 }
 
 function previousPet(n) {
   hidePet('to-right');
-  changeCurrentPet(n - 1);
+  changeCurrentPet();
   showPet('from-left');
 }
 
@@ -196,7 +299,10 @@ document.querySelector('div.arrow-left').addEventListener('click', function() {
 
 document.querySelector('div.arrow-right').addEventListener('click', function() {
   if(isEnabled){
-    nextPet(currentPet);
+    if(window.screen.width < 768){
+      nextPet(currentPet);
+    }else if(window.screen.width <= 1280){
+      nextPet();
+    }
   }
 });
-

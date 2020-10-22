@@ -815,8 +815,23 @@ left: 69px;
   top: -15px;
   right: 0px;
 }
+.pet-sophia{
+  display: none;
+}
+.pet-timmy{
+  display: none;
+}
+.pet-charly{
+  display: none;
+}
+.pet-scarlet{
+  display: none;
+}
+.pet-freddie{
+  display: none;
+}
 .slider-pets{
-  width: 1200зч;
+  width: 1200px;
   height: 465px;
   display: flex;
   flex-flow: row;
@@ -834,8 +849,33 @@ left: 69px;
 
 
 @media (min-width: 768px) and (max-width: 1280px){
-  .pet-woody{
-    display: none;
+  .our-friends{
+    padding-bottom: 211px;
+  }
+  #about{
+    left: -27px;
+  }
+  #pets{
+    left: -19px;
+  }
+  #help{
+    left: -11px;
+  }
+  #contacts{
+    left: 0px;
+  }
+  .slider-pets{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 580px;
+    overflow: hidden;
+    top: 81px;
+    left: -33px;
+  }
+  .btn-get-know{
+    top: 111px;
   }
   .pets-scroll{
     justify-content: center;
@@ -846,27 +886,183 @@ left: 69px;
   }
   .arrow-left{
     margin-right: 12px;
-    left: -14px;
+    left: -33px;
+    top: 66px;
   }
   .arrow-right{
     margin-left: -54px;
-    left: 13px;
+    left: 34px;
+    top: 66px;
+}
+.pet-katrine{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.pet-jennifer{
+  position: absolute;
+  top: 0px;
+  left: 310px;
+}
+.pet-woody{
+  position: absolute;
+  width: 270px;
+  top: 0px;
+  left: 580px;
+  right: 0px;
+}
+.pet-sophia{
+  position: absolute;
+  top: 0px;
+  left: 580px;
+  display: flex;
+}
+.pet-timmy{
+  position: absolute;
+  top: 0px;
+  left: 580px;
+  display: flex;
+}
+.pet-charly{
+  position: absolute;
+  top: 0px;
+  left: 580px;
+  display: flex;
+}
+.pet-scarlet{
+  position: absolute;
+  top: 0px;
+  left: 580px;
+  display: flex;
+}
+.pet-freddie{
+  position: absolute;
+  top: 0px;
+  left: 580px;
+  display: flex;
+}
+.to-left-one{
+  animation: to-left-one 1s;
+}
+.active-one{
+  left: 0px;
+}
+.active-two{
+  left: 310px
+}
+.hide-pet-to-right-one{
+  left: 1000px;
+}
+.hide-pet-to-right-two{
+  left: 1000px;
+}
+@keyframes to-left-one {
+  from {
+    left: 0px;
   }
-  .pet-katrine{
-    top: 81px;
-    left: -13px;
-  }
-  .pet-jennifer{
-    top: 81px;
-    left: -13px;
+  to {
+    left: -580px;
   }
 }
+.to-left-two{
+  animation: to-left-two 1s;
+}
+@keyframes to-left-two {
+  from {
+    left: 310px;
+  }
+  to {
+    left: -270px;
+  }
+}
+.from-right-one{
+  animation: from-right-one 1s;
+}
+@keyframes from-right-one {
+  from{
+    left: 580px;
+  }
+  to{
+    left: 0px;
+  }
+}
+.from-right-two{
+  animation: from-right-two 1s;
+}
+@keyframes from-right-two {
+  from{
+    left: 890px;
+  }
+  to{
+    left: 310px;
+  }
+}
+
+.to-right-one{
+  animation: to-right-one 1s;
+}
+.active-one{
+  left: 0px;
+}
+.active-two{
+  left: 310px
+}
+.hide-pet-to-right-one{
+  left: 580px;
+}
+.hide-pet-to-right-two{
+  left: 890px;
+}
+@keyframes to-right-one {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 580px;
+  }
+}
+.to-right-two{
+  animation: to-right-two 1s;
+}
+@keyframes to-right-two {
+  from {
+    left: 310px;
+  }
+  to {
+    left: 890px;
+  }
+}
+.from-left-one{
+  animation: from-left-one 1s;
+}
+@keyframes from-left-one {
+  from{
+    left: -890px;
+  }
+  to{
+    left: 0px;
+  }
+}
+.from-left-two{
+  animation: from-left-two 1s;
+}
+@keyframes from-left-two {
+  from{
+    left: -580px;
+  }
+  to{
+    left: 310px;
+  }
+}
+  }
+
 @media (min-width: 320px) and (max-width: 767px){
   .slider-pets{
     width: 270px;
     overflow: hidden;
   }
   .slider-pets:hover{
+    background-color: #fafafa;
     cursor: pointer;
     outline: 1px solid #fddcc4; 
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
@@ -879,14 +1075,14 @@ left: 69px;
     position: absolute;
     top: 41px;
     left: 0px;
-    /*display: none;*/
+    display: none;
   }
   .pet-jennifer{
     width: 270px;
     position: absolute;
     top: 41px;
     left: 270px;
-    /*display: none;*/
+    display: none;
   }
   .pet-woody{
     width: 270px;
@@ -894,10 +1090,45 @@ left: 69px;
     top: 41px;
     left: 405px;
     right: 0px;
-    /*display: none;*/
+    display: none;
+  }
+  .pet-sophia{
+    width: 270px;
+    position: absolute;
+    top: 41px;
+    left: 270px;
+    display: none;
+  }
+  .pet-timmy{
+    width: 270px;
+    position: absolute;
+    top: 41px;
+    left: 270px;
+    display: none;
+  }
+  .pet-charly{
+    width: 270px;
+    position: absolute;
+    top: 41px;
+    left: 270px;
+    display: none;
+  }
+  .pet-scarlet{
+    width: 270px;
+    position: absolute;
+    top: 41px;
+    left: 270px;
+    display: none;
+  }
+  .pet-freddie{
+    width: 270px;
+    position: absolute;
+    top: 41px;
+    left: 270px;
+    display: none;
   }
   .our-friends{
-    padding-bottom: 197px;
+    padding-bottom: 167px;
   }
   .our-friends h2{
     font-size: 1.563rem;
@@ -920,14 +1151,22 @@ left: 69px;
     left: 509px;
   }
   .btn-get-know{
-    top: 155px;
+    top: 0px;
     left: 0px;
+  }
+  .btn-get-know-link{
+    position: relative;
+    top: 125px;
   }
   .hide-pet-to-left{
     left: -270px;
+    display: flex;
+    flex-flow: column;
   }
   .hide-pet-to-right{
     left: 270px;
+    display: flex;
+    flex-flow: column;
   }
   .active, .next{
     display: flex;
@@ -935,6 +1174,8 @@ left: 69px;
   }
   .active{
     left: 0px;
+    display: flex;
+    flex-flow: column;
   }
   .next {
     width: 270px;
