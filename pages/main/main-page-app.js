@@ -139,8 +139,14 @@ let petsInfo = [
 
 let pets = document.querySelectorAll('div.carousel');
 let currentPet = 0;
+
 let currentPetLeft = 0;
 let currentPetRight = 1;
+let currentPetOne = 0;
+let currentPetTwo = 1;
+let currentPetThree = 2;
+
+
 
 
 function getRandomIntInclusive(min, max) {
@@ -169,6 +175,24 @@ function getRandomIntInclusiveForTwoElements(min, max){
   return currentPetLeft, currentPetRight;
 }
 
+function getRandomIntInclusiveForThreeElements(min, max){
+  let nextNumPetOne = 0;
+  let nextNumPetTwo = 0;
+  let nextNumPetThree = 0;
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  do{
+    nextNumPetOne = Math.floor(Math.random() * (max - min + 1)) + min;
+    nextNumPetTwo = Math.floor(Math.random() * (max - min + 1)) + min;
+    nextNumPetThree = Math.floor(Math.random() * (max - min + 1)) + min;
+  }while(nextNumPetOne === nextNumPetTwo || nextNumPetOne === nextNumPetThree || 
+         nextNumPetTwo === nextNumPetThree);
+  currentPetOne = nextNumPetOne;
+  currentPetTwo = nextNumPetTwo;
+  currentPetThree = nextNumPetThree;
+  return currentPetOne, currentPetTwo,currentPetThree;
+}
+
 let isEnabled = true;
 
 function changeCurrentPet() {
@@ -176,6 +200,8 @@ function changeCurrentPet() {
     getRandomIntInclusive(0,7);
   }else if(window.screen.width <= 1280){
     getRandomIntInclusiveForTwoElements(0,7);
+  }else{
+    getRandomIntInclusiveForThreeElements(0,7);
   }
 }
 
@@ -215,6 +241,42 @@ function hidePet(direction) {
       pets[currentPetRight].addEventListener('animationend', function() {
         this.classList.add('hide-pet-to-right-two');
         this.classList.remove('to-right-two', 'active-two');
+      });
+    }
+  }else{
+    if(direction === 'to-left'){
+      isEnabled = false;
+      pets[currentPetOne].classList.add('to-left-one');
+      pets[currentPetTwo].classList.add('to-left-two');
+      pets[currentPetThree].classList.add('to-left-three');
+      pets[currentPetOne].addEventListener('animationend', function() {
+        this.classList.remove('to-left-one', 'active-one');
+        this.classList.add('hide-pet-to-right-one');
+      });
+      pets[currentPetTwo].addEventListener('animationend', function() {
+        this.classList.remove('to-left-two', 'active-two');
+        this.classList.add('hide-pet-to-right-two');
+      });
+      pets[currentPetThree].addEventListener('animationend', function() {
+        this.classList.remove('to-left-three', 'active-three');
+        this.classList.add('hide-pet-to-right-three');
+      });
+    }else if(direction === 'to-right'){
+      isEnabled = false;
+      pets[currentPetOne].classList.add('to-right-one');
+      pets[currentPetTwo].classList.add('to-right-two');
+      pets[currentPetThree].classList.add('to-right-three');
+      pets[currentPetOne].addEventListener('animationend', function() {
+        this.classList.remove('to-right-one', 'active-one');
+        this.classList.add('hide-pet-to-right-one');
+      });
+      pets[currentPetTwo].addEventListener('animationend', function() {
+        this.classList.remove('to-right-two', 'active-two');
+        this.classList.add('hide-pet-to-right-two');
+      });
+      pets[currentPetThree].addEventListener('animationend', function() {
+        this.classList.remove('to-right-three', 'active-three');
+        this.classList.add('hide-pet-to-right-three');
       });
     }
   }
@@ -269,6 +331,46 @@ function showPet(direction) {
         isEnabled = true;
       });
     }
+  }else{
+    if(direction === 'from-right'){
+      pets[currentPetOne].classList.add('from-right-one');
+      pets[currentPetTwo].classList.add('from-right-two');
+      pets[currentPetThree].classList.add('from-right-three');
+      pets[currentPetOne].addEventListener('animationend', function() {
+        this.classList.add('active-one');
+        this.classList.remove('from-right-one','hide-pet-to-right-one', 'hide-pet-to-right-two','hide-pet-to-right-three');
+        isEnabled = true;
+      });
+      pets[currentPetTwo].addEventListener('animationend', function() {
+        this.classList.add('active-two');
+        this.classList.remove('from-right-two','hide-pet-to-right-one', 'hide-pet-to-right-two','hide-pet-to-right-three');
+        isEnabled = true;
+      });
+      pets[currentPetThree].addEventListener('animationend', function() {
+        this.classList.add('active-three');
+        this.classList.remove('from-right-three','hide-pet-to-right-one', 'hide-pet-to-right-two','hide-pet-to-right-three');
+        isEnabled = true;
+      });
+    }else if(direction === 'from-left'){
+      pets[currentPetOne].classList.add('from-left-one');
+      pets[currentPetTwo].classList.add('from-left-two');
+      pets[currentPetThree].classList.add('from-left-three');
+      pets[currentPetOne].addEventListener('animationend', function() {
+        this.classList.add('active-one');
+        this.classList.remove('from-left-one','hide-pet-to-right-one', 'hide-pet-to-right-two','hide-pet-to-right-three');
+        isEnabled = true;
+      });
+      pets[currentPetTwo].addEventListener('animationend', function() {
+        this.classList.add('active-two');
+        this.classList.remove('from-left-two','hide-pet-to-right-one', 'hide-pet-to-right-two','hide-pet-to-right-three');
+        isEnabled = true;
+      });
+      pets[currentPetThree].addEventListener('animationend', function() {
+        this.classList.add('active-three');
+        this.classList.remove('from-left-three','hide-pet-to-right-one', 'hide-pet-to-right-two','hide-pet-to-right-three');
+        isEnabled = true;
+      });
+    }
   }
 }
 
@@ -280,15 +382,29 @@ function nextPet(n) {
   }else if(window.screen.width <= 1280){
     hidePet('to-left');
     changeCurrentPet();
-    console.log(currentPetLeft,currentPetRight);
-    showPet('from-right');
+    setTimeout(function () {
+      showPet('from-right');
+    },1000);
+  }else{
+    hidePet('to-left');
+    changeCurrentPet();
+    setTimeout(function () {
+      showPet('from-right');
+    },1000);
+    //showPet('from-right');
   }
 }
 
 function previousPet(n) {
   hidePet('to-right');
   changeCurrentPet();
-  showPet('from-left');
+  if(window.screen.width <= 767){
+    showPet('from-left');
+  }else{
+    setTimeout(function () {
+      showPet('from-left');
+    },1000);
+  }
 }
 
 document.querySelector('div.arrow-left').addEventListener('click', function() {
@@ -302,6 +418,8 @@ document.querySelector('div.arrow-right').addEventListener('click', function() {
     if(window.screen.width < 768){
       nextPet(currentPet);
     }else if(window.screen.width <= 1280){
+      nextPet();
+    }else{
       nextPet();
     }
   }
