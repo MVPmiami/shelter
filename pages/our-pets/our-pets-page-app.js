@@ -21,7 +21,6 @@ function burgerMenu(selector) {
       },1000);
     }else{
       menu.classList.add('burger-active');
-      menu.classList.add('burger-menu-lines-active');
       overlay.classList.add('overlay-active');
       menu.classList.remove('burger-dissactive');
       overlayOuter.classList.add('overley-burger-outer-active');
@@ -36,7 +35,7 @@ function burgerMenu(selector) {
 
   links[3].addEventListener('click', () => switchMenu());
   links[2].addEventListener('click', () => switchMenu());
-  links[0].addEventListener('click', () => switchMenu());
+  links[1].addEventListener('click', () => switchMenu());
   overlay.addEventListener('click', () => switchMenu());
   overlayOuter.addEventListener('click', () => switchMenu());
   logoTitle.addEventListener('click', () => switchMenu());
