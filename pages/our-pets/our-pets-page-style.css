@@ -344,6 +344,7 @@ header {
   padding-bottom: 30px;
   position: relative;
   top: 81px;
+  align-items: center;
 }
 
 .our-friends {
@@ -385,6 +386,7 @@ header {
 .flex-prop{
   border-radius: 9px 9px 0px 0px;
   height: 435px;
+  width: 270px;
   display: flex;
   flex-flow: column;
   justify-content: space-between;

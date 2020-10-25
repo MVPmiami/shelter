@@ -588,6 +588,7 @@ left: 69px;
   margin: 0 auto;
   max-width: 1200px;
   align-items: center;
+  position: relative;
 }
 
 .pets-scroll {
@@ -640,6 +641,7 @@ left: 69px;
 
 .flex-prop{
   height: 435px;
+  text-decoration: none;
   display: flex;
   flex-flow: column;
   justify-content: space-around;
@@ -974,7 +976,193 @@ left: 69px;
     left: 720px;
   }
 }
+/*Popup*/
+.popup{
+  position: absolute;
+  top: 150%;
+  left: 44%;
+  z-index: 60;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease 0s;
+}
+.overlay-popup{
+  position: absolute;
+  top: 150%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(123, 123, 123, 0.8);;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 60;
+}
+@media (min-width: 768px) and (max-width: 1280px){
+  .popup{
+    top: 226%;
+    left: 34%;
+  }
+  .overlay-popup{
+    top: 226%;
+    left: 0;
+  }
+  .popup-content{
+    top: 250px;
+    left: 43%;
+  }
+}
+.popup-content{
+  width: 230px;
+  height: 531px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+  position: absolute;
+  top: 250px;
+  left: 43%;
+  transition: all 0.8s ease 0s;
+  transform: translate(0px, -100%);
+  opacity: 0;
+  z-index: 65;
+}
+@media (min-width: 320px) and (max-width: 767px){
+  .popup{
+    top: 176%;
+    left: 11%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .overlay-popup{
+    top: 176%;
+    left: 0;
+  }
+  .popup-content{
+    top: 250px;
+    left: 43%;
+    height: 330px;
+  }
+}
+@media (min-width: 400px) and (max-width: 767px){
+  .popup{
+    top: 176%;
+    left: 18%;
+  }
+}
+@media (min-width: 500px) and (max-width: 767px){
+  .popup{
+    top: 176%;
+    left: 25%;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px){
+  .popup{
+    top: 176%;
+    left: 29%;
+  }
+}
+@media (min-width: 700px) and (max-width: 767px){
+  .popup{
+    top: 176%;
+    left: 33%;
+  }
+}
+.overlay-popup.open{
+  opacity: 1;
+  visibility: visible;
+}
+.name{
+  text-align: center;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+.type-breed{
+  text-align: center;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+.description{
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 110%;
+  text-align: justify;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+.img{
+  width: 170px;
+  height: 170px;
+}
 
+.img-hide{
+  display: none;
+}
+
+.age, .inoculations, .diseases, .parasites{
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+.popup-content ul{
+  position: relative;
+  left: -25px;
+}
+.popup-close{
+  position: absolute;
+  top: -57px;
+  left: 223px;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius:50%;
+  color:black;
+  text-decoration: none;
+  font-size: 32px;
+  text-align: center;
+}
+.popup-close:hover{
+  cursor: pointer;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
+}
+.popup-close span{
+  position: absolute;
+  top: 3px;
+  left: 18px;
+}
+.popup.open{
+  opacity: 1;
+  visibility: visible;
+}
+.popup.open .popup-content{
+  transform: translate(0px,0px);
+  opacity: 1;
+}
+.scroll-hidden{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding-right: 16px;
+}
 @media (min-width: 768px) and (max-width: 1280px){
   .our-friends{
     padding-bottom: 211px;
@@ -1003,10 +1191,6 @@ left: 69px;
   }
   .btn-get-know{
     top: 111px;
-  }
-  .flex-prop{
-    margin-right: 40px;
-
   }
   .arrow-left{
     margin-right: 12px;
