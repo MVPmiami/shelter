@@ -139,6 +139,9 @@ header {
   header{
     height: 135px;
   }
+  #pets{
+    left: -4px;
+  }
   .logo{
     position: relative;
     top: -51px;
@@ -820,11 +823,7 @@ left: 69px;
   left: 105px;
   overflow: hidden;
 }
-.flex-prop:hover {
-  cursor: pointer;
-  outline: none; 
-  box-shadow: none;
-}
+
 
 .active-one{
   left: 0px;
